@@ -1,0 +1,38 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/.*
+<PROJECT_ROOT>/build/.*
+<PROJECT_ROOT>/flow-typed/.*
+<PROJECT_ROOT>/src/serviceWorker\.js
+<PROJECT_ROOT>/src/index\.js
+<PROJECT_ROOT>/libsDef.js
+<PROJECT_ROOT>/styleguide.config.js
+.*\.test\.js.*
+
+[include]
+
+[libs]
+./libsDef.js
+
+[lints]
+
+[options]
+all=true
+module.file_ext=.js
+module.file_ext=.json
+module.file_ext=.jsx
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+module.name_mapper.extension='svg' -> '<PROJECT_ROOT>/ImageStub.js.flow'
+module.name_mapper.extension='png' -> '<PROJECT_ROOT>/ImageStub.js.flow'
+module.name_mapper.extension='css' -> '<PROJECT_ROOT>/SCSSFlowStub.js.flow'
+module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/SCSSFlowStub.js.flow'
+module.name_mapper.extension='sass' -> '<PROJECT_ROOT>/SCSSFlowStub.js.flow'
+module.name_mapper='^components\(.*\)$' -> '<PROJECT_ROOT>/src/components/\1'
+module.name_mapper='^pages\(.*\)$' -> '<PROJECT_ROOT>/src/pages/\1'
+module.name_mapper='^state\(.*\)$' -> '<PROJECT_ROOT>/src/pages/\1'
+module.name_mapper='^reducers\(.*\)$' -> '<PROJECT_ROOT>/src/pages/\1'
+module.name_mapper='^assets\(.*\)$' -> '<PROJECT_ROOT>/src/pages/\1'
+module.system.node.resolve_dirname='<PROJECT_ROOT>/src/'
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
+
+[strict]

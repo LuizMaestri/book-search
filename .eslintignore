@@ -1,0 +1,6 @@
+/src/.*test.jsx
+/src/serviceWorker.js
+/node_modules/.*
+/flow-typed/.*
+styleguide.config.js
+libsDef.js
